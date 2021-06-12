@@ -1,6 +1,7 @@
 .movie_container {
 	display: flex;
 	max-width: 800px;
+	margin-top: 60px;
 }
 
 .poster_container {
@@ -99,6 +100,7 @@
 	.movie_container {
 		flex-direction: column;
 		align-items: center;
+		margin-top: 0;
 	}
 	.info_container {
 		margin-top: 30px;
@@ -108,11 +110,10 @@
 
 @media (max-width: 380px) {
 	.info_container {
-		margin: 0;
-		padding: 20px 0;
+		/* margin: 0; */
 	}
-
 	.poster_container {
 		width: 250px;
+		height: 375px;
 	}
 }

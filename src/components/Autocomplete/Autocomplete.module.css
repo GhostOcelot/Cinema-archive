@@ -1,6 +1,9 @@
 .search_results_item {
 	padding: 5px 10px;
 	cursor: pointer;
+	border-bottom: 1px solid #222;
+	font-size: 0.9em;
+	font-weight: 300;
 }
 
 .search_results_item:hover {

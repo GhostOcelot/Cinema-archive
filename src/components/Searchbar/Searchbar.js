@@ -35,6 +35,7 @@ const Searchbar = () => {
 					type="text"
 					value={SearchText}
 					className={classes.movie_search}
+					placeholder="explore"
 				/>
 				<ul className={classes.search_results_list}>
 					<Autocomplete searchResults={searchResults} />

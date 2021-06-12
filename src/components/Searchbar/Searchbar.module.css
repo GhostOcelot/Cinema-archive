@@ -10,9 +10,10 @@
 	display: block;
 	margin: 30px auto;
 	padding: 10px;
-	width: 90%;
+	width: 100%;
 	background-color: #222;
-	color: #888;
+	color: rgb(255, 187, 0);
+	text-decoration: none;
 	border: none;
 	border-bottom: 1px solid #888;
 	caret-color: rgb(255, 187, 0);
@@ -31,8 +32,7 @@
 .search_results_list {
 	background-color: #111;
 	list-style: none;
-	width: 90%;
-	max-width: 100%;
+	width: 100%;
 	position: absolute;
 	top: 74px;
 	/* border-left: 1px solid rgb(255, 187, 0); */
