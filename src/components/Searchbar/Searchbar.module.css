@@ -1,0 +1,28 @@
+.movie_searchbar_container {
+	display: flex;
+	justify-content: center;
+}
+
+.movie_search {
+	font-family: 'Jost', sans-serif;
+	font-size: 16px;
+	display: block;
+	margin: 30px auto;
+	padding: 10px;
+	width: 400px;
+	background-color: #222;
+	color: #888;
+	border: 1px solid #888;
+	border-radius: 4px;
+	caret-color: rgb(255, 187, 0);
+}
+
+.movie_search:focus {
+	border: 1px solid rgb(255, 187, 0);
+
+	outline: thin #111;
+}
+
+.search_icon {
+	color: #fff;
+}
