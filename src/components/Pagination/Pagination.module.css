@@ -1,0 +1,19 @@
+.button_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	width: 30px;
+	height: 30px;
+	margin: 20px 10px;
+	background-color: rgb(255, 187, 0);
+	border: none;
+	cursor: pointer;
+}
+
+.current_page {
+	color: #888;
+	padding: 10px;
+}
