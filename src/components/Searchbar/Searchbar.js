@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 import { useState, useContext } from 'react';
 import { MoviesContext } from '../../contexts/MoviesContext';
 import classes from './Searchbar.module.css';
+import MovieCard from '../MovieCard/MovieCard';
 
 const Searchbar = () => {
 	const [searchResults, setSearchResults] = useState(null);
@@ -20,14 +22,41 @@ const Searchbar = () => {
 		}
 	};
 
+	const handleBlur = e => {
+		setSearchResults(null);
+		e.target.value = '';
+	};
+
 	return (
 		<>
 			<div className={classes.movie_searchbar_container}>
-				<input onChange={e => searchMovie(e)} type="text" className={classes.movie_search} />
+				<input
+					onChange={e => searchMovie(e)}
+					// onBlur={e => handleBlur(e)}
+					type="text"
+					className={classes.movie_search}
+				/>
+				<ul className={classes.search_results_list}>
+					{searchResults &&
+						searchResults.map(movie => (
+							<Link
+								className={classes.search_results_link}
+								to={`/movie/${movie.id}`}
+								key={movie.id}
+							>
+								<li
+									className={
+										searchResults
+											? classes.search_results_item
+											: `${classes.search_results_item} ${classes.empty}`
+									}
+								>
+									{movie.title.slice(0, 50)} {movie.title.length < 50 ? null : '...'}
+								</li>
+							</Link>
+						))}
+				</ul>
 			</div>
-			<ul className={classes.search_list}>
-				{searchResults && searchResults.map(movie => <li key={movie.id}>{movie.title}</li>)}
-			</ul>
 		</>
 	);
 };

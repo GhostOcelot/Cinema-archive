@@ -1,0 +1,14 @@
+.movie_poster {
+	width: 400px;
+	max-width: 100%;
+}
+
+.link_to_browser {
+	display: block;
+	text-decoration: none;
+	background-color: #fff;
+	width: 400px;
+	max-width: 100%;
+	text-align: center;
+	padding: 10px;
+}
