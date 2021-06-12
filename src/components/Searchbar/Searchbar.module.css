@@ -10,18 +10,15 @@
 	display: block;
 	margin: 30px auto;
 	padding: 10px;
-	width: 400px;
+	width: 90%;
 	background-color: #222;
 	color: #888;
 	border: none;
 	border-bottom: 1px solid #888;
-	/* border: 1px solid #888; */
-	/* border-radius: 4px; */
 	caret-color: rgb(255, 187, 0);
 }
 
 .movie_search:focus {
-	border: none;
 	border-bottom: 1px solid rgb(255, 187, 0);
 
 	outline: thin #111;
@@ -34,30 +31,9 @@
 .search_results_list {
 	background-color: #111;
 	list-style: none;
-	width: 400px;
+	width: 90%;
 	max-width: 100%;
 	position: absolute;
-	left: calc(50% - 200px);
 	top: 74px;
-	border: 1px solid rgb(255, 187, 0);
-	border-top: none;
-	/* padding: 10px; */
-}
-
-.search_results_item {
-	padding: 5px 10px;
-	cursor: pointer;
-}
-
-.search_results_item:hover {
-	background-color: #444;
-}
-
-.search_results_link {
-	text-decoration: none;
-	color: rgb(255, 187, 0);
-}
-
-.empty {
-	border: none;
+	/* border-left: 1px solid rgb(255, 187, 0); */
 }

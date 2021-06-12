@@ -1,0 +1,13 @@
+.search_results_item {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.search_results_item:hover {
+	background-color: #444;
+}
+
+.search_results_link {
+	text-decoration: none;
+	color: rgb(255, 187, 0);
+}

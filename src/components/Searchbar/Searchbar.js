@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useState, useContext } from 'react';
-import { MoviesContext } from '../../contexts/MoviesContext';
+import { useState } from 'react';
+import Autocomplete from '../Autocomplete/Autocomplete';
 import classes from './Searchbar.module.css';
-import MovieCard from '../MovieCard/MovieCard';
 
 const Searchbar = () => {
 	const [searchResults, setSearchResults] = useState(null);
-	const { movies } = useContext(MoviesContext);
+	const [SearchText, setSearchText] = useState('');
 
 	const searchMovie = e => {
+		setSearchText(e.target.value);
 		if (e.target.value.trim().length) {
 			fetch(
 				`https://api.themoviedb.org/3/search/movie?api_key=41f9379ca4f4d32c4fcfd3709124a0f8&page=1&query=${e.target.value}`
@@ -22,9 +22,9 @@ const Searchbar = () => {
 		}
 	};
 
-	const handleBlur = e => {
+	const resetSearch = () => {
+		setSearchText('');
 		setSearchResults(null);
-		e.target.value = '';
 	};
 
 	return (
@@ -32,29 +32,12 @@ const Searchbar = () => {
 			<div className={classes.movie_searchbar_container}>
 				<input
 					onChange={e => searchMovie(e)}
-					// onBlur={e => handleBlur(e)}
 					type="text"
+					value={SearchText}
 					className={classes.movie_search}
 				/>
 				<ul className={classes.search_results_list}>
-					{searchResults &&
-						searchResults.map(movie => (
-							<Link
-								className={classes.search_results_link}
-								to={`/movie/${movie.id}`}
-								key={movie.id}
-							>
-								<li
-									className={
-										searchResults
-											? classes.search_results_item
-											: `${classes.search_results_item} ${classes.empty}`
-									}
-								>
-									{movie.title.slice(0, 50)} {movie.title.length < 50 ? null : '...'}
-								</li>
-							</Link>
-						))}
+					<Autocomplete searchResults={searchResults} />
 				</ul>
 			</div>
 		</>

@@ -1,6 +1,8 @@
 .movie_item {
 	color: #888;
 	list-style: none;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .link {
@@ -8,5 +10,5 @@
 }
 
 .movie_item:hover {
-	color: #bbb;
+	color: rgb(255, 187, 0);
 }

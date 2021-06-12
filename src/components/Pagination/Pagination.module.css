@@ -5,15 +5,25 @@
 }
 
 .button {
-	width: 30px;
-	height: 30px;
-	margin: 20px 10px;
+	width: 35px;
+	height: 25px;
+	margin: 20px 9px;
 	background-color: rgb(255, 187, 0);
 	border: none;
 	cursor: pointer;
+	border-radius: 4px;
 }
 
 .current_page {
 	color: #888;
 	padding: 10px;
+	text-align: center;
+}
+
+@media (max-width: 500px) {
+	.current_page {
+		font-size: 0.9em;
+		padding: 6px;
+		width: 60px;
+	}
 }
