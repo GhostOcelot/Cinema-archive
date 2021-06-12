@@ -1,8 +1,9 @@
 .genre_container {
+	max-width: 500px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: 10px;
 }
 
 .genre_tile {
@@ -16,7 +17,8 @@
 	cursor: pointer;
 }
 
-.genre_tile:hover {
+.genre_tile:hover,
+.active {
 	background-color: #888;
 	color: #111;
 }

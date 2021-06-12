@@ -4,7 +4,8 @@ import Movie from '../Movie/Movie';
 import classes from './MovieList.module.css';
 
 const MovieList = () => {
-	const movies = useContext(MoviesContext);
+	const { movies } = useContext(MoviesContext);
+	console.log(movies);
 
 	return (
 		<>

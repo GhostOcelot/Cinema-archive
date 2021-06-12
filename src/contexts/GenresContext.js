@@ -12,7 +12,9 @@ const GenresContextProvider = props => {
 			.then(data => setGenres(data.genres));
 	}, []);
 
-	return <GenresContext.Provider value={genres}>{props.children}</GenresContext.Provider>;
+	return (
+		<GenresContext.Provider value={{ genres, setGenres }}>{props.children}</GenresContext.Provider>
+	);
 };
 
 export default GenresContextProvider;

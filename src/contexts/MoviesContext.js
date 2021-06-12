@@ -12,7 +12,9 @@ const MoviesContextProvider = props => {
 			.then(data => setMovies(data));
 	}, []);
 
-	return <MoviesContext.Provider value={movies}>{props.children}</MoviesContext.Provider>;
+	return (
+		<MoviesContext.Provider value={{ movies, setMovies }}>{props.children}</MoviesContext.Provider>
+	);
 };
 
 export default MoviesContextProvider;
