@@ -3,6 +3,7 @@
 :root {
 	--primaryFont: 'Jost', sans-serif;
 	--colorOrange: rgb(255, 187, 0);
+	--colorOrange2: rgb(236, 201, 103);
 	--colorGrey1: rgb(140, 140, 140);
 	--colorGrey2: rgb(68, 68, 68);
 	--colorGrey3: rgb(51, 51, 51);
@@ -27,4 +28,14 @@ body {
 button,
 input {
 	font-family: var(--primaryFont);
+}
+
+.no_select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

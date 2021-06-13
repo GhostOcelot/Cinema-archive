@@ -3,8 +3,6 @@ import classes from './Movie.module.css';
 import { FaImage } from 'react-icons/fa';
 
 const Movie = ({ movie }) => {
-	// console.log(movie);
-
 	return (
 		<Link to={`/movie/${movie.id}`} className={classes.link}>
 			<li className={classes.movie_tile}>
@@ -13,7 +11,7 @@ const Movie = ({ movie }) => {
 					{movie.backdrop_path ? (
 						<img
 							className={classes.image}
-							src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
+							src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
 							alt="#"
 						/>
 					) : (

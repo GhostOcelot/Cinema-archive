@@ -5,6 +5,7 @@ import Searchbar from './components/Searchbar/Searchbar';
 import MovieCard from './components/MovieCard/MovieCard';
 import Footer from './components/Footer/Footer';
 import Pagination from './components/Pagination/Pagination';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Searchbar />
 					<MovieList />
 					<Pagination />
+					<ScrollToTop />
 				</Route>
 				<Route path="/movie/:id" component={MovieCard} />
 			</BrowserRouter>

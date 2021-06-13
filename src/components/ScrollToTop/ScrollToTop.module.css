@@ -1,0 +1,20 @@
+.scroll_btn {
+	width: 40px;
+	height: 40px;
+	background-color: var(--colorOrange2);
+	color: var(--colorGrey5);
+	border: none;
+	font-size: 1.6em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_btn:focus {
+	outline: thin dotted var(--colorOrange);
+}

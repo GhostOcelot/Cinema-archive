@@ -7,7 +7,7 @@ import { FaHeart, FaUser, FaImage } from 'react-icons/fa';
 const MovieCard = () => {
 	const [movie, setMovie] = useState();
 	const params = useParams();
-	console.log(movie);
+
 	useEffect(() => {
 		fetch(
 			`https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.REACT_APP_API_KEY}`

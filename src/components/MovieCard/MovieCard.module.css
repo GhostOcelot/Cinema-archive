@@ -70,11 +70,10 @@
 
 .genre_tab {
 	display: inline-block;
-	background-color: var(--colorOrange);
+	background-color: var(--colorOrange2);
 	margin: 0 8px 6px 0;
 	padding: 2px 6px;
 	font-size: 0.8em;
-	border-radius: 2px;
 }
 
 .movie_rank {

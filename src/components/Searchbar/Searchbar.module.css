@@ -23,7 +23,6 @@
 
 .movie_search:focus {
 	border: none;
-	/* border-bottom: 1px solid var(--colorGrey1); */
 	outline: thin dotted var(--colorOrange);
 }
 
@@ -32,9 +31,11 @@
 }
 
 .search_results_list {
-	background-color: var(--colorGrey5);
+	background-color: rgba(17, 17, 17, 0.95);
 	list-style: none;
 	width: 100%;
 	position: absolute;
 	top: 74px;
+	width: 90%;
+	max-width: 600px;
 }

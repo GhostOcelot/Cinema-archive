@@ -13,12 +13,11 @@
 	border: 1px solid var(--colorGrey2);
 	background-color: var(--colorGrey5);
 	color: var(--colorGrey1);
-	border-radius: 4px;
 	cursor: pointer;
 }
 
 .genre_tile:hover,
 .active {
-	background-color: var(--colorGrey1);
+	background-color: var(--colorOrange2);
 	color: var(--colorGrey5);
 }
