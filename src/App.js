@@ -4,6 +4,7 @@ import MovieList from './components/MovieList/MovieList';
 import Searchbar from './components/Searchbar/Searchbar';
 import MovieCard from './components/MovieCard/MovieCard';
 import Footer from './components/Footer/Footer';
+import Pagination from './components/Pagination/Pagination';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 					<Genres />
 					<Searchbar />
 					<MovieList />
+					<Pagination />
 				</Route>
 				<Route path="/movie/:id" component={MovieCard} />
 			</BrowserRouter>

@@ -9,9 +9,9 @@ const MovieList = () => {
 
 	return (
 		<>
-			<h1 className={classes.header}>Movie List</h1>
+			{/* <h1 className={classes.header}>Movie List</h1> */}
 			<Pagination />
-			<ul>
+			<ul className={classes.movie_list}>
 				{movies ? (
 					movies.results.map(movie => {
 						return <Movie movie={movie} key={movie.id} />;

@@ -30,6 +30,7 @@ const Searchbar = () => {
 		<>
 			<div className={classes.movie_searchbar_container}>
 				<input
+					// onBlur={() => resetSearch()}
 					onChange={e => searchMovie(e)}
 					type="text"
 					value={SearchText}

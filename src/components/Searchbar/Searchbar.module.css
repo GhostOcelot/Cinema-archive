@@ -7,21 +7,23 @@
 .movie_search {
 	font-size: 16px;
 	display: block;
-	margin: 30px auto;
+	margin: 30px auto 5px;
 	padding: 10px;
-	width: 100%;
+	width: 90%;
+	max-width: 600px;
 	background-color: var(--colorGrey3);
 	color: var(--colorOrange);
 	border: none;
-	border-bottom: 1px solid var(--colorGrey1);
+	border-bottom: 1px solid var(--colorOrange);
 }
 
 .movie_search::placeholder {
-	color: #555;
+	color: var(--colorGrey1);
 }
 
 .movie_search:focus {
-	border-bottom: 1px solid var(--colorOrange);
+	border: none;
+	/* border-bottom: 1px solid var(--colorGrey1); */
 	outline: thin dotted var(--colorOrange);
 }
 
