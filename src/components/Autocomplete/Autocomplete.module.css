@@ -1,16 +1,16 @@
 .search_results_item {
 	padding: 5px 10px;
 	cursor: pointer;
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid var(--colorGrey4);
 	font-size: 0.9em;
 	font-weight: 300;
 }
 
 .search_results_item:hover {
-	background-color: #444;
+	background-color: var(--colorGrey2);
 }
 
 .search_results_link {
 	text-decoration: none;
-	color: rgb(255, 187, 0);
+	color: var(--colorOrange);
 }

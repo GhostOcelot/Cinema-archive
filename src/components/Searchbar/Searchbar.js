@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Autocomplete from '../Autocomplete/Autocomplete';
 import classes from './Searchbar.module.css';
@@ -11,7 +10,7 @@ const Searchbar = () => {
 		setSearchText(e.target.value);
 		if (e.target.value.trim().length) {
 			fetch(
-				`https://api.themoviedb.org/3/search/movie?api_key=41f9379ca4f4d32c4fcfd3709124a0f8&page=1&query=${e.target.value}`
+				`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&page=1&query=${e.target.value}`
 			)
 				.then(res => res.json())
 				.then(data => {
@@ -22,10 +21,10 @@ const Searchbar = () => {
 		}
 	};
 
-	const resetSearch = () => {
-		setSearchText('');
-		setSearchResults(null);
-	};
+	// const resetSearch = () => {
+	// 	setSearchText('');
+	// 	setSearchResults(null);
+	// };
 
 	return (
 		<>
@@ -35,7 +34,7 @@ const Searchbar = () => {
 					type="text"
 					value={SearchText}
 					className={classes.movie_search}
-					placeholder="explore"
+					placeholder="explore..."
 				/>
 				<ul className={classes.search_results_list}>
 					<Autocomplete searchResults={searchResults} />

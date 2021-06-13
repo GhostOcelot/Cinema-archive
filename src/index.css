@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
 
 :root {
-	font-family: 'Jost', sans-serif;
+	--primaryFont: 'Jost', sans-serif;
+	--colorOrange: rgb(255, 187, 0);
+	--colorGrey1: rgb(140, 140, 140);
+	--colorGrey2: rgb(68, 68, 68);
+	--colorGrey3: rgb(51, 51, 51);
+	--colorGrey4: rgb(34, 34, 34);
+	--colorGrey5: rgb(17, 17, 17);
+	font-family: var(--primaryFont);
 }
 
 * {
@@ -14,13 +21,10 @@ body {
 	display: flex;
 	justify-content: center;
 	padding: 40px 100px 0 100px;
-	background-color: #111;
+	background-color: var(--colorGrey5);
 }
 
-button {
-	font-family: 'Jost', sans-serif;
-}
-
-.app {
-	max-width: 900px;
+button,
+input {
+	font-family: var(--primaryFont);
 }

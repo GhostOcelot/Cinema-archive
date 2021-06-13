@@ -1,6 +1,6 @@
 h1,
 h2 {
-	color: #888;
+	color: var(--colorGrey1);
 }
 
 .header {

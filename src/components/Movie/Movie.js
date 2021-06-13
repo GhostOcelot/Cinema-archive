@@ -9,9 +9,7 @@ const Movie = ({ movie }) => {
 				className={classes.link}
 				href={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
 			>
-				<li className={classes.movie_item}>
-					{movie.title.length > 50 ? `${movie.title.slice(0, 60)} ...` : movie.title}
-				</li>
+				<li className={classes.movie_item}>{movie.title}</li>
 			</Link>
 		</>
 	);

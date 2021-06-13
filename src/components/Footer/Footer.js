@@ -1,12 +1,12 @@
-import { FaCopyright, FaRegCopyright } from 'react-icons/fa';
+import { FaRegCopyright } from 'react-icons/fa';
 import classes from './Footer.module.css';
 
 const Footer = () => {
 	return (
 		<>
-			<p className={classes.copyright}>
-				<FaRegCopyright /> <span className={classes.copyright_text}>copyright</span>
-			</p>
+			<div className={classes.copyright}>
+				<FaRegCopyright /> <span className={classes.copyright_text}>copyright 2021</span>
+			</div>
 		</>
 	);
 };

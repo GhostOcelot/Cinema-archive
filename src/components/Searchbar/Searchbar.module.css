@@ -5,35 +5,34 @@
 }
 
 .movie_search {
-	font-family: 'Jost', sans-serif;
 	font-size: 16px;
 	display: block;
 	margin: 30px auto;
 	padding: 10px;
 	width: 100%;
-	background-color: #222;
-	color: rgb(255, 187, 0);
-	text-decoration: none;
+	background-color: var(--colorGrey3);
+	color: var(--colorOrange);
 	border: none;
-	border-bottom: 1px solid #888;
-	caret-color: rgb(255, 187, 0);
+	border-bottom: 1px solid var(--colorGrey1);
+}
+
+.movie_search::placeholder {
+	color: #555;
 }
 
 .movie_search:focus {
-	border-bottom: 1px solid rgb(255, 187, 0);
-
-	outline: thin #111;
+	border-bottom: 1px solid var(--colorOrange);
+	outline: thin dotted var(--colorOrange);
 }
 
 .search_icon {
-	color: #fff;
+	color: var(--colorGrey1);
 }
 
 .search_results_list {
-	background-color: #111;
+	background-color: var(--colorGrey5);
 	list-style: none;
 	width: 100%;
 	position: absolute;
 	top: 74px;
-	/* border-left: 1px solid rgb(255, 187, 0); */
 }

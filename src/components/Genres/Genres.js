@@ -11,9 +11,9 @@ const Genres = () => {
 
 	useEffect(() => {
 		fetch(
-			`https://api.themoviedb.org/3/discover/movie?api_key=41f9379ca4f4d32c4fcfd3709124a0f8&sort_by=popularity.desc&page=1&with_genres=${selectedGenres.join(
-				','
-			)}`
+			`https://api.themoviedb.org/3/discover/movie?api_key=${
+				process.env.REACT_APP_API_KEY
+			}&sort_by=popularity.desc&page=1&with_genres=${selectedGenres.join(',')}`
 		)
 			.then(res => res.json())
 			.then(data => setMovies(data));

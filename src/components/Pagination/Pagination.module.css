@@ -8,14 +8,14 @@
 	width: 35px;
 	height: 25px;
 	margin: 20px 9px;
-	background-color: rgb(255, 187, 0);
+	background-color: var(--colorOrange);
 	border: none;
 	cursor: pointer;
 	border-radius: 4px;
 }
 
 .current_page {
-	color: #888;
+	color: var(--colorGrey1);
 	padding: 10px;
 	text-align: center;
 }

@@ -1,7 +1,6 @@
 .movie_item {
-	color: #888;
+	color: var(--colorGrey1);
 	list-style: none;
-	width: 90%;
 	margin: 0 auto;
 }
 
@@ -10,5 +9,5 @@
 }
 
 .movie_item:hover {
-	color: rgb(255, 187, 0);
+	color: var(--colorOrange);
 }

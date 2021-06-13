@@ -8,11 +8,9 @@ const MovieCard = () => {
 	const [movie, setMovie] = useState();
 	const params = useParams();
 
-	console.log(movie);
-
 	useEffect(() => {
 		fetch(
-			`https://api.themoviedb.org/3/movie/${params.id}?api_key=41f9379ca4f4d32c4fcfd3709124a0f8&language=en-US`
+			`https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.REACT_APP_API_KEY}`
 		)
 			.then(res => res.json())
 			.then(data => setMovie(data));
