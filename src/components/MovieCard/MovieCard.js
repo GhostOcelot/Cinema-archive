@@ -40,6 +40,7 @@ const MovieCard = () => {
 							{movie.title}
 							<span className={classes.movie_release_date}>{movie.release_date.slice(0, 4)}</span>
 						</h1>
+						<h2 className={classes.movie_tagline}>{movie.tagline}</h2>
 						<p className={classes.movie_overview}>{movie.overview}</p>
 						<div className={classes.genre_container}>
 							{movie.genres.map(genre => {

@@ -9,7 +9,6 @@ const MovieList = () => {
 
 	return (
 		<>
-			{/* <h1 className={classes.header}>Movie List</h1> */}
 			<Pagination />
 			<ul className={classes.movie_list}>
 				{movies ? (

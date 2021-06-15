@@ -12,6 +12,10 @@
 	font-family: var(--primaryFont);
 }
 
+#root {
+	width: 1400px;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -19,10 +23,26 @@
 }
 
 body {
+	/* overflow: hidden; */
+	min-height: 100vh;
+	padding: 40px 100px 0 100px;
 	display: flex;
 	justify-content: center;
-	padding: 40px 100px 0 100px;
-	background-color: var(--colorGrey5);
+	background: linear-gradient(var(--colorGrey4), var(--colorGrey5));
+}
+
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.app {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100vw;
 }
 
 button,

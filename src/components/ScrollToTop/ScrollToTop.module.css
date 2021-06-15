@@ -1,7 +1,7 @@
 .scroll_btn {
 	width: 40px;
 	height: 40px;
-	background-color: var(--colorOrange2);
+	background: linear-gradient(135deg, var(--colorOrange), var(--colorOrange2));
 	color: var(--colorGrey5);
 	border: none;
 	font-size: 1.6em;

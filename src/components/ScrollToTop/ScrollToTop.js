@@ -11,8 +11,8 @@ const ScrollToTop = () => {
 	};
 
 	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, false);
-		return () => window.removeEventListener('scroll', handleScroll, false);
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
 	});
 
 	const scrollToTop = () => {

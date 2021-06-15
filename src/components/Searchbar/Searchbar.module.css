@@ -9,7 +9,7 @@
 	display: block;
 	margin: 30px auto 5px;
 	padding: 10px;
-	width: 90%;
+	width: 93%;
 	max-width: 600px;
 	background-color: var(--colorGrey3);
 	color: var(--colorOrange);
@@ -36,6 +36,6 @@
 	width: 100%;
 	position: absolute;
 	top: 74px;
-	width: 90%;
+	width: 93%;
 	max-width: 600px;
 }

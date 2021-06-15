@@ -12,7 +12,42 @@ h2 {
 }
 
 .movie_list {
+	margin: 0 auto;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	max-width: 90%;
+	height: 360px;
+	overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--colorGrey4);
+	border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--colorGrey2);
+	border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+@media (max-width: 599px) {
+	.movie_list {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(auto-fill, 300px);
+		overflow-x: visible;
+		overflow-x: visible;
+		height: 100%;
+	}
+	::-webkit-scrollbar {
+		width: 0;
+	}
 }
