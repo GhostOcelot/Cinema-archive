@@ -3,7 +3,7 @@
 	align-items: center;
 	max-width: 800px;
 	min-height: 75vh;
-	margin: 30px auto 0;
+	margin: 30px auto;
 }
 
 .poster_container {
@@ -110,7 +110,7 @@
 	.movie_container {
 		flex-direction: column;
 		align-items: center;
-		margin-top: 0;
+		margin: 0 auto;
 	}
 	.info_container {
 		/* padding: 30px 30px 40px; */

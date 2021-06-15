@@ -1,7 +1,13 @@
 .link {
 	text-decoration: none;
-	/* display: flex; */
+	display: flex;
+	/* justify-content: center; */
 }
+
+.link:focus {
+	outline: thin dotted var(--colorOrange);
+}
+
 .movie_tile {
 	display: flex;
 	flex-direction: column;
@@ -62,7 +68,15 @@
 		width: 300px;
 		height: 290px;
 	}
+
 	.movie_title {
 		font-size: 1.3em;
+	}
+}
+
+@media (max-width: 350px) {
+	.movie_tile {
+		width: 250px;
+		height: 245px;
 	}
 }

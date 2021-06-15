@@ -25,3 +25,7 @@
 	background-color: var(--colorOrange2);
 	color: var(--colorGrey5);
 }
+
+.genre_tile:focus {
+	outline: thin dotted var(--colorOrange);
+}

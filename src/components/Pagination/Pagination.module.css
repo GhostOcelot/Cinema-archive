@@ -4,6 +4,10 @@
 	align-items: center;
 }
 
+.button:focus {
+	outline: thin dotted #fff;
+}
+
 .button {
 	width: 35px;
 	height: 30px;

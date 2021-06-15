@@ -12,10 +12,10 @@ h2 {
 }
 
 .movie_list {
-	margin: 0 auto;
+	margin: 0 auto 50px;
 	display: flex;
-	max-width: 90%;
-	height: 360px;
+	width: 1380px;
+	height: 290px;
 	overflow-x: scroll;
 }
 
@@ -38,14 +38,35 @@ h2 {
 	background: #555;
 }
 
+@media (max-width: 1430px) {
+	.movie_list {
+		width: 1100px;
+	}
+}
+
+@media (max-width: 1150px) {
+	.movie_list {
+		width: 830px;
+	}
+}
+
+@media (max-width: 870px) {
+	.movie_list {
+		width: 555px;
+	}
+}
+
 @media (max-width: 599px) {
 	.movie_list {
-		display: grid;
+		width: auto;
+		flex-direction: column;
+		align-items: center;
+		/* display: grid;
 		justify-content: center;
-		grid-template-columns: repeat(auto-fill, 300px);
-		overflow-x: visible;
+		grid-template-columns: repeat(auto-fill); */
 		overflow-x: visible;
 		height: 100%;
+		margin-bottom: 0;
 	}
 	::-webkit-scrollbar {
 		width: 0;
