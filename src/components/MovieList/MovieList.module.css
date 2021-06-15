@@ -8,11 +8,11 @@ h2 {
 }
 
 .loading {
-	text-align: center;
+	margin: 130px auto;
 }
 
 .movie_list {
-	margin: 0 auto 50px;
+	margin: 0 auto 53px;
 	display: flex;
 	width: 1380px;
 	height: 290px;

@@ -11,13 +11,10 @@ const MovieList = () => {
 		<>
 			<Pagination />
 			<ul className={classes.movie_list}>
-				{movies ? (
+				{movies &&
 					movies.results.map(movie => {
 						return <Movie movie={movie} key={movie.id} />;
-					})
-				) : (
-					<h1 className={classes.loading}>Loading...</h1>
-				)}
+					})}
 			</ul>
 		</>
 	);

@@ -23,12 +23,12 @@
 }
 
 body {
-	/* overflow: hidden; */
 	min-height: 100vh;
 	padding: 40px 100px 0 100px;
 	display: flex;
 	justify-content: center;
 	background: linear-gradient(var(--colorGrey4), var(--colorGrey5));
+	overscroll-behavior-y: contain;
 }
 
 #root {

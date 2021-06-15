@@ -1,26 +1,20 @@
 import { BrowserRouter, Route } from 'react-router-dom';
-import Genres from './components/Genres/Genres';
-import MovieList from './components/MovieList/MovieList';
-import Searchbar from './components/Searchbar/Searchbar';
 import MovieCard from './components/MovieCard/MovieCard';
-import Footer from './components/Footer/Footer';
-// import Pagination from './components/Pagination/Pagination';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Home from './components/Home/Home';
+import { MoviesContext } from './contexts/MoviesContext';
+import { useContext } from 'react';
 
 function App() {
+	const { movies } = useContext(MoviesContext);
+
 	return (
 		<div className="app">
 			<BrowserRouter>
 				<Route exact path="/">
-					<Genres />
-					<Searchbar />
-					<MovieList />
-					{/* <Pagination /> */}
-					<ScrollToTop />
+					{movies ? <Home /> : <h1 style={{ margin: '200px auto' }}>Loading...</h1>}
 				</Route>
 				<Route path="/movie/:id" component={MovieCard} />
 			</BrowserRouter>
-			<Footer />
 		</div>
 	);
 }
