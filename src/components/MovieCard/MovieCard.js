@@ -3,10 +3,12 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import classes from './MovieCard.module.css';
 import { FaHeart, FaUser, FaImage } from 'react-icons/fa';
+import Actors from '../Actors/Actors';
 import Footer from '../Footer/Footer';
 
 const MovieCard = () => {
 	const [movie, setMovie] = useState();
+	const [credits, setCredits] = useState();
 	const params = useParams();
 
 	useEffect(() => {
@@ -16,6 +18,15 @@ const MovieCard = () => {
 			.then(res => res.json())
 			.then(data => setMovie(data));
 	}, [params]);
+
+	useEffect(() => {
+		fetch(
+			`https://api.themoviedb.org/3/movie/${params.id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=de-DE`
+		)
+			.then(res => res.json())
+			.then(data => setCredits(data));
+	}, [params]);
+
 	return (
 		<>
 			{movie ? (
@@ -61,6 +72,7 @@ const MovieCard = () => {
 							</p>
 						</div>
 					</div>
+					<Actors credits={credits} />
 					<Footer />
 				</>
 			) : (

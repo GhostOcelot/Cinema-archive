@@ -1,8 +1,8 @@
 .search_results_item {
-	padding: 5px 10px;
+	padding: 4px 10px;
 	cursor: pointer;
 	border-bottom: 1px solid var(--colorGrey4);
-	font-size: 0.9em;
+	font-size: 0.85em;
 	font-weight: 300;
 	width: 100%;
 }

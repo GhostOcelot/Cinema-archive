@@ -5,7 +5,7 @@
 }
 
 .button:focus {
-	outline: thin dotted #fff;
+	outline: thin dotted var(--colorOrange);
 }
 
 .button {
@@ -13,9 +13,8 @@
 	height: 30px;
 	margin: 20px 9px;
 	background-color: var(--colorOrange2);
-	border: none;
+	border: 1px solid var(--colorGrey4);
 	cursor: pointer;
-	/* border-radius: 4px; */
 }
 
 .current_page {

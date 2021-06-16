@@ -7,8 +7,8 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop';
 const Home = () => {
 	return (
 		<>
-			<Genres />
 			<Searchbar />
+			<Genres />
 			<MovieList />
 			<ScrollToTop />
 			<Footer />
