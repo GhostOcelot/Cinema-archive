@@ -1,5 +1,6 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import MovieCard from './components/MovieCard/MovieCard';
+import ActorCard from './components/ActorCard/ActorCard';
 import Home from './components/Home/Home';
 import ResetScrollPosition from './components/ResetScrollPosition/ResetScrollPosition';
 import { MoviesContext } from './contexts/MoviesContext';
@@ -19,6 +20,10 @@ function App() {
 
 				<Route path="/movie/:id">
 					<MovieCard />
+				</Route>
+
+				<Route path="/actor/:id">
+					<ActorCard />
 				</Route>
 			</BrowserRouter>
 		</div>

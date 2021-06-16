@@ -15,7 +15,7 @@ const MoviesContextProvider = props => {
 			.then(data => {
 				setMovies(data);
 			});
-	}, []);
+	}, [currentPage]);
 
 	return (
 		<MoviesContext.Provider value={{ movies, setMovies }}>{props.children}</MoviesContext.Provider>
