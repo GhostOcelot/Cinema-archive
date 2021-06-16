@@ -29,20 +29,16 @@ body {
 	justify-content: center;
 	background: linear-gradient(var(--colorGrey4), var(--colorGrey5));
 	overscroll-behavior-y: contain;
-}
-
-#root {
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 }
 
 .app {
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* width: 100vw; */
+	align-items: center;
 }
 
 button,

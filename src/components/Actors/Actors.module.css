@@ -6,6 +6,11 @@
 	padding-bottom: 20px;
 }
 
+.actors_container::after {
+	content: '';
+	padding-right: 3px;
+}
+
 .actor {
 	border: 1px solid var(--colorOrange);
 	margin: 10px;
@@ -51,7 +56,7 @@
 
 @media (max-width: 910px) {
 	.actors_container {
-		width: 695px;
+		width: 690px;
 	}
 }
 

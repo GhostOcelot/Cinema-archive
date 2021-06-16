@@ -13,6 +13,7 @@ const Actors = ({ credits }) => {
 									className={classes.actor_headshot}
 									src={`https://image.tmdb.org/t/p/original${actor.profile_path}`}
 									alt="#"
+									loading="lazy"
 								/>
 							) : (
 								<div className={classes.actor_no_headshot}>

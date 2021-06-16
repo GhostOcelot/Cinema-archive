@@ -32,18 +32,19 @@ const MovieCard = () => {
 			{movie ? (
 				<>
 					<div className={classes.movie_container}>
-						<div className={classes.poster_container}>
-							{movie.poster_path ? (
-								<img
-									className={classes.movie_poster}
-									src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-									alt=""
-								/>
-							) : (
-								<div className={classes.movie_poster}>
-									<FaImage />
-								</div>
-							)}
+						<div className={classes.poster_and_link}>
+							<div
+								className={classes.poster_container}
+								style={{
+									backgroundImage: movie.poster_path ? (
+										`url(https://image.tmdb.org/t/p/original${movie.poster_path})`
+									) : (
+										<div className={classes.movie_poster}>
+											<FaImage />
+										</div>
+									),
+								}}
+							></div>
 							<Link className={classes.link_to_browser} to="/">
 								back to browser
 							</Link>
