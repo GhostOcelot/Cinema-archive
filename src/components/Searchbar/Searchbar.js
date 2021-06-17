@@ -1,16 +1,18 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Autocomplete from '../Autocomplete/Autocomplete';
 import classes from './Searchbar.module.css';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const Searchbar = () => {
 	const [searchResults, setSearchResults] = useState(null);
 	const [SearchText, setSearchText] = useState('');
+	const { language } = useContext(LanguageContext);
 
 	const searchMovie = e => {
 		setSearchText(e.target.value);
 		if (e.target.value.trim().length) {
 			fetch(
-				`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&page=1&query=${e.target.value}`
+				`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&page=1&query=${e.target.value}&language=${language}`
 			)
 				.then(res => res.json())
 				.then(data => {

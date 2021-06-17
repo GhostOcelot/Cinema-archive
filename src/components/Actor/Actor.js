@@ -5,8 +5,8 @@ import { FaImage } from 'react-icons/fa';
 const Actor = ({ actor }) => {
 	return (
 		<>
-			<div className={classes.actor} key={actor.id}>
-				<Link to={`/actor/${actor.id}`} className={classes.link}>
+			<Link to={`/actor/${actor.id}`} className={classes.link}>
+				<div className={classes.actor} key={actor.id}>
 					{actor.profile_path ? (
 						<img
 							className={classes.actor_headshot}
@@ -23,8 +23,8 @@ const Actor = ({ actor }) => {
 						<h1 className={classes.actor_name}>{actor.name}</h1>
 						<h2 className={classes.actor_character}>{actor.character}</h2>
 					</div>
-				</Link>
-			</div>
+				</div>
+			</Link>
 		</>
 	);
 };

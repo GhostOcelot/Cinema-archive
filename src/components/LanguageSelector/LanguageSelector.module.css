@@ -1,0 +1,35 @@
+.language_btn_container {
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 0.8em;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.language_btn {
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 22px;
+	height: 22px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+	margin: 3px;
+	border: 1px solid var(--colorGrey2);
+	background-color: var(--colorGrey5);
+	color: var(--colorGrey1);
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.language_btn:hover {
+	background-color: var(--colorGrey3);
+}
+
+.language_btn.active {
+	background-color: var(--colorOrange2);
+	color: var(--colorGrey5);
+	font-weight: 600;
+}

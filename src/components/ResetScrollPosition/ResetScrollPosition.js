@@ -5,7 +5,7 @@ const ResetScrollPosition = ({ movieListRef }) => {
 	const { movies } = useContext(MoviesContext);
 
 	useEffect(() => {
-		window.scrollTo(0, 0);
+		// window.scrollTo(0, 0);
 		movieListRef && movieListRef.current.scrollTo(0, 0);
 	}, [movies, movieListRef]);
 

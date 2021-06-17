@@ -3,21 +3,25 @@ import classes from './Pagination.module.css';
 import { MoviesContext } from '../../contexts/MoviesContext';
 import { SelectedGenresContext } from '../../contexts/SelectedGenresContext';
 import { CurrentPageContext } from '../../contexts/CurrentPageContext';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const Pagination = () => {
 	const { movies, setMovies } = useContext(MoviesContext);
 	const { selectedGenres } = useContext(SelectedGenresContext);
-	const { setCurrentPage } = useContext(CurrentPageContext);
+	const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
+	const { language } = useContext(LanguageContext);
 
 	const goToPage = page => {
-		if (page === 0 || page === movies.total_pages + 1) {
+		if (page === 0 || page === movies.total_pages + 1 || page === currentPage) {
 			return;
 		}
 
 		fetch(
 			`https://api.themoviedb.org/3/discover/movie?api_key=${
 				process.env.REACT_APP_API_KEY
-			}&sort_by=popularity.desc&page=${page}&with_genres=${selectedGenres.join(',')}`
+			}&sort_by=popularity.desc&page=${page}&with_genres=${selectedGenres.join(
+				','
+			)}&language=${language}`
 		)
 			.then(res => res.json())
 			.then(data => {
@@ -40,7 +44,9 @@ const Pagination = () => {
 					>
 						&lt;
 					</button>
-					<span className={classes.current_page}>page {movies.page}</span>
+					<span className={classes.current_page}>
+						{movies.results.length ? `page ${movies.page}` : ' \u2013 '}
+					</span>
 					<button
 						name="next_page"
 						onClick={() => goToPage(movies.page + 1)}

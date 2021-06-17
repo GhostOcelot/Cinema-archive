@@ -6,18 +6,21 @@ import GenresContextProvider from './contexts/GenresContext';
 import SelectedGenresContextProvider from './contexts/SelectedGenresContext';
 import MoviesContextProvider from './contexts/MoviesContext';
 import CurrentPageContextProvider from './contexts/CurrentPageContext';
+import LanguageContextProvider from './contexts/LanguageContext';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<CurrentPageContextProvider>
-			<GenresContextProvider>
-				<SelectedGenresContextProvider>
-					<MoviesContextProvider>
-						<App />
-					</MoviesContextProvider>
-				</SelectedGenresContextProvider>
-			</GenresContextProvider>
-		</CurrentPageContextProvider>
+		<LanguageContextProvider>
+			<CurrentPageContextProvider>
+				<GenresContextProvider>
+					<SelectedGenresContextProvider>
+						<MoviesContextProvider>
+							<App />
+						</MoviesContextProvider>
+					</SelectedGenresContextProvider>
+				</GenresContextProvider>
+			</CurrentPageContextProvider>
+		</LanguageContextProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

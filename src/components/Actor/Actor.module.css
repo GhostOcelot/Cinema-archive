@@ -3,6 +3,8 @@
 	box-sizing: content-box;
 	padding: 3px;
 	margin: 10px;
+	width: 141px;
+	height: 360px;
 }
 
 .actor_headshot {
@@ -26,7 +28,7 @@
 }
 
 .actor_name {
-	font-size: 1.3em;
+	font-size: 1.2em;
 	line-height: 1.2em;
 	color: var(--colorOrange);
 	margin-bottom: 10px;
@@ -35,6 +37,7 @@
 .actor_character {
 	font-size: 1.1em;
 	font-weight: 400;
+	line-height: 1.3em;
 }
 
 .link {
@@ -45,6 +48,7 @@
 	.actor {
 		height: 280px;
 		margin: 6px;
+		width: 110px;
 	}
 
 	.actor_headshot {
@@ -57,10 +61,16 @@
 		height: 165px;
 	}
 
+	.actor_info {
+		padding: 2px 10px 20px;
+	}
 	.actor_name {
 		font-size: 1em;
+		margin-bottom: 5px;
+		line-height: 1.2em;
 	}
 	.actor_character {
 		font-size: 0.9em;
+		line-height: 1.3em;
 	}
 }

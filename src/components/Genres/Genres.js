@@ -4,18 +4,22 @@ import { MoviesContext } from '../../contexts/MoviesContext';
 import { CurrentPageContext } from '../../contexts/CurrentPageContext';
 import { SelectedGenresContext } from '../../contexts/SelectedGenresContext';
 import classes from './Genres.module.css';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const Genres = () => {
 	const { genres } = useContext(GenresContext);
 	const { setMovies } = useContext(MoviesContext);
 	const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
 	const { selectedGenres, setSelectedGenres } = useContext(SelectedGenresContext);
+	const { language } = useContext(LanguageContext);
 
 	useEffect(() => {
 		fetch(
 			`https://api.themoviedb.org/3/discover/movie?api_key=${
 				process.env.REACT_APP_API_KEY
-			}&sort_by=popularity.desc&page=1&with_genres=${selectedGenres.join(',')}&page=${currentPage}`
+			}&sort_by=popularity.desc&page=1&with_genres=${selectedGenres.join(
+				','
+			)}&page=${currentPage}&language=${language}`
 		)
 			.then(res => res.json())
 			.then(data => setMovies(data));

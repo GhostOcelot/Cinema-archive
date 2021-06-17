@@ -1,7 +1,8 @@
 import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
 import MovieCard from './components/MovieCard/MovieCard';
 import ActorCard from './components/ActorCard/ActorCard';
-import Home from './components/Home/Home';
+import ResetWindowScroll from './components/ResetWindowScroll/ResetWindowScroll';
 import { MoviesContext } from './contexts/MoviesContext';
 import { useContext } from 'react';
 
@@ -11,6 +12,8 @@ function App() {
 	return (
 		<div className="app">
 			<BrowserRouter>
+				<ResetWindowScroll />
+
 				<Route exact path="/">
 					{movies ? <Home /> : <h1 style={{ margin: '200px auto' }}>Loading...</h1>}
 				</Route>
