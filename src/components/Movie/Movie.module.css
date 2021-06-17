@@ -1,12 +1,5 @@
 .link {
 	text-decoration: none;
-}
-
-.link:focus {
-	outline: thin dotted var(--colorOrange);
-}
-
-.movie_tile {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -14,11 +7,16 @@
 	height: 225px;
 	background-color: var(--colorGrey4);
 	margin: 25px;
-	border-left: 1px solid var(--colorOrange);
-	border-top: 1px solid var(--colorOrange);
-	border-right: 1px solid var(--colorOrange2);
-	border-bottom: 1px solid var(--colorOrange2);
-	overflow: hidden;
+	padding: 5px 5px 0;
+	border: 3px solid var(--colorOrange);
+}
+
+.link:focus {
+	outline: thin dotted var(--colorOrange);
+}
+
+.movie_tile {
+	list-style: none;
 }
 
 .image_container {
@@ -62,7 +60,7 @@
 }
 
 @media (max-width: 599px) {
-	.movie_tile {
+	.link {
 		width: 300px;
 		height: 290px;
 	}
@@ -72,7 +70,7 @@
 }
 
 @media (max-width: 350px) {
-	.movie_tile {
+	.link {
 		width: 250px;
 		height: 245px;
 	}

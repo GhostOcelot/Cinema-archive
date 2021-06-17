@@ -4,8 +4,8 @@ import { FaImage } from 'react-icons/fa';
 
 const Movie = ({ movie }) => {
 	return (
-		<Link to={`/movie/${movie.id}`} className={classes.link}>
-			<li className={classes.movie_tile}>
+		<li className={classes.movie_tile}>
+			<Link to={`/movie/${movie.id}`} className={classes.link}>
 				<div className={classes.image_container}>
 					{movie.backdrop_path ? (
 						<img
@@ -22,8 +22,8 @@ const Movie = ({ movie }) => {
 					{movie.release_date ? movie.release_date.slice(0, 4) : ' \u2013 '}
 				</p>
 				<div className={classes.movie_title}>{movie.title}</div>
-			</li>
-		</Link>
+			</Link>
+		</li>
 	);
 };
 

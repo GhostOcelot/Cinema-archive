@@ -128,14 +128,9 @@
 		min-height: 97vh;
 		min-height: 100vh;
 	}
-	.info_container {
-		/* padding: 30px 30px 40px; */
-	}
 }
 
 @media (max-width: 380px) {
-	.movie_container {
-	}
 	.poster_container {
 		width: 250px;
 		height: 375px;

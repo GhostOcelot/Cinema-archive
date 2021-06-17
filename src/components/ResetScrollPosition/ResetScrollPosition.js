@@ -1,12 +1,13 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useContext } from 'react';
+import { MoviesContext } from '../../contexts/MoviesContext';
 
-const ResetScrollPosition = () => {
-	const { pathname } = useLocation();
+const ResetScrollPosition = ({ movieListRef }) => {
+	const { movies } = useContext(MoviesContext);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [pathname]);
+		movieListRef && movieListRef.current.scrollTo(0, 0);
+	}, [movies, movieListRef]);
 
 	return null;
 };

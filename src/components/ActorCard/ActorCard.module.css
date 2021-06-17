@@ -4,10 +4,13 @@
 
 .actor_name {
 	color: var(--colorOrange);
+	padding-bottom: 10px;
 }
 
 .actor_bio {
 	color: var(--colorGrey1);
+	border-top: 5px solid var(--colorOrange);
+	padding-top: 15px;
 }
 
 .homepage_link {

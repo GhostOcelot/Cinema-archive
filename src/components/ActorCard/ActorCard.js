@@ -7,8 +7,6 @@ const ActorCard = () => {
 	const [actor, setActor] = useState();
 	const params = useParams();
 
-	console.log(actor);
-
 	useEffect(() => {
 		fetch(
 			`https://api.themoviedb.org/3/person/${params.id}?api_key=41f9379ca4f4d32c4fcfd3709124a0f8`
@@ -22,7 +20,11 @@ const ActorCard = () => {
 			{actor ? (
 				<div className={classes.actor_container}>
 					<h1 className={classes.actor_name}>{actor.name}</h1>
-					<p className={classes.actor_bio}>{actor.biography}</p>
+					<p className={classes.actor_bio}>
+						{' '}
+						{actor.biography ? actor.biography : 'No bio available'}
+					</p>
+
 					<Link to="/" className={classes.homepage_link}>
 						back to browser
 					</Link>
