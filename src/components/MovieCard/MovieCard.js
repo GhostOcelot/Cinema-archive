@@ -5,12 +5,14 @@ import ActorsList from '../ActorsList/ActorsList';
 import MovieInfo from '../MovieInfo/MovieInfo';
 import Footer from '../Footer/Footer';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const MovieCard = () => {
 	const [movie, setMovie] = useState();
 	const [credits, setCredits] = useState();
 	const params = useParams();
 	const { language } = useContext(LanguageContext);
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		fetch(
@@ -18,7 +20,7 @@ const MovieCard = () => {
 		)
 			.then(res => res.json())
 			.then(data => setMovie(data));
-	}, [params]);
+	}, [params, language]);
 
 	useEffect(() => {
 		fetch(
@@ -26,7 +28,7 @@ const MovieCard = () => {
 		)
 			.then(res => res.json())
 			.then(data => setCredits(data));
-	}, [params]);
+	}, [params, language]);
 
 	return (
 		<>
@@ -37,7 +39,7 @@ const MovieCard = () => {
 					<Footer />
 				</>
 			) : (
-				<h1 className={classes.loading}>Loading...</h1>
+				<h1 className={classes.loading}> {t('loading')} </h1>
 			)}
 		</>
 	);

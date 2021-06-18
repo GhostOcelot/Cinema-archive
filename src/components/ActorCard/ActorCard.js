@@ -3,11 +3,13 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import classes from './ActorCard.module.css';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const ActorCard = () => {
 	const [actor, setActor] = useState();
 	const { language } = useContext(LanguageContext);
 	const params = useParams();
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		fetch(
@@ -15,24 +17,21 @@ const ActorCard = () => {
 		)
 			.then(res => res.json())
 			.then(data => setActor(data));
-	}, [params.id]);
+	}, [params.id, language]);
 
 	return (
 		<>
 			{actor ? (
 				<div className={classes.actor_container}>
 					<h1 className={classes.actor_name}>{actor.name}</h1>
-					<p className={classes.actor_bio}>
-						{' '}
-						{actor.biography ? actor.biography : 'No bio available'}
-					</p>
+					<p className={classes.actor_bio}>{actor.biography ? actor.biography : t('noBio')}</p>
 
 					<Link to="/" className={classes.homepage_link}>
-						back to browser
+						{t('backToBrowser')}
 					</Link>
 				</div>
 			) : (
-				<h1>Loading</h1>
+				<h1>{t('loading')}</h1>
 			)}
 		</>
 	);

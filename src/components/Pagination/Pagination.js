@@ -4,12 +4,14 @@ import { MoviesContext } from '../../contexts/MoviesContext';
 import { SelectedGenresContext } from '../../contexts/SelectedGenresContext';
 import { CurrentPageContext } from '../../contexts/CurrentPageContext';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const Pagination = () => {
 	const { movies, setMovies } = useContext(MoviesContext);
 	const { selectedGenres } = useContext(SelectedGenresContext);
 	const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
 	const { language } = useContext(LanguageContext);
+	const { t } = useTranslation();
 
 	const goToPage = page => {
 		if (page === 0 || page === movies.total_pages + 1 || page === currentPage) {
@@ -45,7 +47,7 @@ const Pagination = () => {
 						&lt;
 					</button>
 					<span className={classes.current_page}>
-						{movies.results.length ? `page ${movies.page}` : ' \u2013 '}
+						{movies.results.length ? `${t('page')} ${movies.page}` : ' \u2013 '}
 					</span>
 					<button
 						name="next_page"

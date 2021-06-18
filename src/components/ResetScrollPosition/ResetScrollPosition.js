@@ -1,13 +1,14 @@
 import { useEffect, useContext } from 'react';
-import { MoviesContext } from '../../contexts/MoviesContext';
+import { SelectedGenresContext } from '../../contexts/SelectedGenresContext';
+import { CurrentPageContext } from '../../contexts/CurrentPageContext';
 
 const ResetScrollPosition = ({ movieListRef }) => {
-	const { movies } = useContext(MoviesContext);
+	const { selectedGenres } = useContext(SelectedGenresContext);
+	const { currentPage } = useContext(CurrentPageContext);
 
 	useEffect(() => {
-		// window.scrollTo(0, 0);
 		movieListRef && movieListRef.current.scrollTo(0, 0);
-	}, [movies, movieListRef]);
+	}, [selectedGenres, currentPage, movieListRef]);
 
 	return null;
 };

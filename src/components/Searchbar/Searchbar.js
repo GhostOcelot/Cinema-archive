@@ -2,11 +2,13 @@ import { useState, useContext } from 'react';
 import Autocomplete from '../Autocomplete/Autocomplete';
 import classes from './Searchbar.module.css';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const Searchbar = () => {
 	const [searchResults, setSearchResults] = useState(null);
 	const [SearchText, setSearchText] = useState('');
 	const { language } = useContext(LanguageContext);
+	const { t } = useTranslation();
 
 	const searchMovie = e => {
 		setSearchText(e.target.value);
@@ -23,22 +25,23 @@ const Searchbar = () => {
 		}
 	};
 
-	// const resetSearch = () => {
-	// 	setSearchText('');
-	// 	setSearchResults(null);
-	// };
+	const resetSearch = e => {
+		// setSearchText('');
+		// setSearchResults(null);
+	};
 
 	return (
 		<>
 			<div className={classes.movie_searchbar_container}>
 				<input
-					// onBlur={() => resetSearch()}
+					onBlur={e => resetSearch(e)}
 					onChange={e => searchMovie(e)}
 					type="text"
 					value={SearchText}
 					className={classes.movie_search}
-					placeholder="explore..."
+					placeholder={t('explore')}
 				/>
+
 				<ul className={classes.search_results_list}>
 					<Autocomplete searchResults={searchResults} />
 				</ul>

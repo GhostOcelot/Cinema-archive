@@ -8,11 +8,12 @@
 	background-color: var(--colorGrey4);
 	margin: 25px;
 	padding: 5px 5px 0;
-	border: 3px solid var(--colorOrange);
+	border: 3px solid var(--colorOrange2);
 }
 
 .link:focus {
-	outline: thin dotted var(--colorOrange);
+	box-shadow: 0 0 0 2pt var(--colorGrey5), 0 0 0 3pt var(--colorOrange);
+	outline: none;
 }
 
 .movie_tile {

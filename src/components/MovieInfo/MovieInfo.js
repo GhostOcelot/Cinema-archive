@@ -1,8 +1,11 @@
 import classes from './MovieInfo.module.css';
 import { Link } from 'react-router-dom';
 import { FaHeart, FaUser, FaImage } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const MovieInfo = ({ movie }) => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<div className={classes.movie_container}>
@@ -20,7 +23,7 @@ const MovieInfo = ({ movie }) => {
 						}}
 					></div>
 					<Link className={classes.link_to_browser} to="/">
-						back to browser
+						{t('backToBrowser')}
 					</Link>
 				</div>
 				<div className={classes.info_container}>

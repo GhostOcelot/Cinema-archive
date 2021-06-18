@@ -5,7 +5,8 @@
 }
 
 .button:focus {
-	outline: thin dotted var(--colorOrange);
+	box-shadow: 0 0 0 1pt var(--colorOrange);
+	outline: none;
 }
 
 .button {
@@ -26,7 +27,6 @@
 @media (max-width: 500px) {
 	.current_page {
 		font-size: 0.9em;
-		padding: 6px;
 		width: 60px;
 	}
 }

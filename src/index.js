@@ -7,6 +7,7 @@ import SelectedGenresContextProvider from './contexts/SelectedGenresContext';
 import MoviesContextProvider from './contexts/MoviesContext';
 import CurrentPageContextProvider from './contexts/CurrentPageContext';
 import LanguageContextProvider from './contexts/LanguageContext';
+import './i18n';
 
 ReactDOM.render(
 	<React.StrictMode>

@@ -16,5 +16,6 @@
 }
 
 .scroll_btn:focus {
-	outline: thin dotted var(--colorOrange);
+	box-shadow: 0 0 0 1pt var(--colorGrey5), 0 0 0 2pt var(--colorOrange);
+	outline: none;
 }

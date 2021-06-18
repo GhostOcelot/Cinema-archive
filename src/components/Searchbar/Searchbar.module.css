@@ -25,7 +25,8 @@
 
 .movie_search:focus {
 	border-bottom: 1px solid var(--colorGrey5);
-	outline: thin dotted var(--colorOrange);
+	box-shadow: 0 0 0 1pt var(--colorOrange);
+	outline: none;
 }
 
 .search_icon {

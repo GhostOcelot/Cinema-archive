@@ -1,9 +1,16 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import classes from './LanguageSelector.module.css';
+import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {
 	const { language, setLanguage } = useContext(LanguageContext);
+	const { i18n } = useTranslation();
+
+	const changeLanguage = language => {
+		i18n.changeLanguage(language);
+		setLanguage(language);
+	};
 
 	return (
 		<div className={classes.language_btn_container}>
@@ -13,7 +20,7 @@ const LanguageSelector = () => {
 						? `${classes.language_btn} ${classes.active}`
 						: `${classes.language_btn}`
 				}
-				onClick={() => setLanguage('en-US')}
+				onClick={() => changeLanguage('en-US')}
 			>
 				EN
 			</button>
@@ -23,10 +30,13 @@ const LanguageSelector = () => {
 						? `${classes.language_btn} ${classes.active}`
 						: `${classes.language_btn}`
 				}
-				onClick={() => setLanguage('pl-PL')}
+				onClick={() => changeLanguage('pl-PL')}
 			>
 				PL
 			</button>
+			{language === 'pl-PL' && (
+				<p className={classes.info}>Niektóre informacje mogą być niedostępne w wersji polskiej</p>
+			)}
 		</div>
 	);
 };
