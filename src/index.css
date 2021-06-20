@@ -4,6 +4,7 @@
 	--primaryFont: 'Jost', sans-serif;
 	--colorOrange: rgb(255, 187, 0);
 	--colorOrange2: rgb(236, 201, 103);
+	--colorGrey: rgb(200, 200, 200);
 	--colorGrey1: rgb(140, 140, 140);
 	--colorGrey2: rgb(68, 68, 68);
 	--colorGrey3: rgb(51, 51, 51);
@@ -12,33 +13,27 @@
 	font-family: var(--primaryFont);
 }
 
-#root {
-	width: 1400px;
-}
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-body {
+.app {
 	min-height: 100vh;
 	padding: 40px 30px 0 30px;
-	display: flex;
-	justify-content: center;
-	background: linear-gradient(var(--colorGrey4), var(--colorGrey5));
-	overscroll-behavior-y: contain;
-	display: flex;
-	align-items: center;
-}
-
-.app {
-	/* margin: 0 auto; */
+	background: var(--colorGrey);
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overscroll-behavior-y: contain;
+	transition: background 0.5s;
+}
+
+.app.dark {
+	background: var(--colorGrey5);
 }
 
 button {

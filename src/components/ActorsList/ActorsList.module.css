@@ -1,9 +1,8 @@
 .actors_container {
 	width: 1040px;
-	margin: 0 auto;
 	display: flex;
 	overflow-x: scroll;
-	padding-bottom: 32px;
+	padding-bottom: 20px;
 }
 
 .actors_container::after {

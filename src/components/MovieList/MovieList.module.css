@@ -16,7 +16,7 @@ h2 {
 }
 
 .movie_list {
-	margin: 0 auto 15px;
+	margin-bottom: 15px;
 	display: flex;
 	align-items: center;
 	width: 1380px;

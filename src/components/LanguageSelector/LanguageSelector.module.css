@@ -4,7 +4,7 @@
 	margin-bottom: 25px;
 	font-size: 0.8em;
 	position: absolute;
-	top: 20px;
+	top: 17px;
 	left: 27px;
 }
 
@@ -17,8 +17,8 @@
 	height: 22px;
 	font-size: 0.8em;
 	padding: 5px 10px;
-	margin: 3px;
-	border: 1px solid var(--colorGrey2);
+	margin: 4px;
+	border: 2px solid var(--colorGrey2);
 	background-color: var(--colorGrey5);
 	color: var(--colorGrey1);
 	cursor: pointer;
@@ -30,12 +30,12 @@
 }
 
 .language_btn:focus {
-	box-shadow: 0 0 0 1pt var(--colorOrange);
+	box-shadow: 0 0 0 1pt var(--colorOrange), 0 0 0 2pt var(--colorGrey5);
 	outline: none;
 }
 
 .language_btn.active {
-	background-color: var(--colorOrange2);
+	background-color: var(--colorOrange);
 	color: var(--colorGrey5);
 	font-weight: 600;
 }
@@ -46,8 +46,14 @@
 	font-size: 0.8em;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 540px) {
 	.info {
 		max-width: 180px;
+	}
+}
+
+@media (max-width: 390px) {
+	.info {
+		display: none;
 	}
 }

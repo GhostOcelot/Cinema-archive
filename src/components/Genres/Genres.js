@@ -23,7 +23,7 @@ const Genres = () => {
 		)
 			.then(res => res.json())
 			.then(data => setMovies(data));
-	}, [selectedGenres, setMovies, currentPage]);
+	}, [selectedGenres, setMovies, currentPage, language]);
 
 	const selectGenre = genre => {
 		setCurrentPage(1);

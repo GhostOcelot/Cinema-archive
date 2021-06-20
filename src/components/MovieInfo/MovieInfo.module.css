@@ -42,10 +42,14 @@
 	background: linear-gradient(160deg, var(--colorOrange), var(--colorOrange2));
 	color: var(--colorGrey5);
 	width: 330px;
-	/* max-width: 100%; */
 	height: 45px;
 	text-align: center;
 	padding: 10px;
+}
+
+.link_to_browser:focus {
+	outline: none;
+	box-shadow: inset 0 0 0 1pt var(--colorGrey5);
 }
 
 .info_container {
@@ -58,17 +62,26 @@
 
 .movie_title {
 	line-height: 1.3em;
-	color: var(--colorOrange);
+	color: var(--colorGrey5);
 	margin-bottom: 20px;
+	transition: color 0.5s;
+}
+
+.movie_title.dark {
+	color: var(--colorOrange);
 }
 
 .movie_tagline {
 	font-size: 1.3em;
 	font-weight: 300;
 	font-style: oblique;
-	color: var(--colorOrange2);
+	color: var(--colorGrey5);
 	margin-bottom: 5px;
 	line-height: 1.3em;
+}
+
+.movie_tagline.dark {
+	color: var(--colorOrange);
 }
 
 .movie_release_date {
@@ -89,7 +102,7 @@
 
 .genre_tab {
 	display: inline-block;
-	background-color: var(--colorOrange2);
+	background-color: var(--colorOrange);
 	margin: 0 8px 6px 0;
 	padding: 2px 6px;
 	font-size: 0.8em;
@@ -124,7 +137,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin: 0 auto;
 		min-height: 97vh;
 		min-height: 100vh;
 	}

@@ -1,9 +1,12 @@
+import { useContext } from 'react';
 import classes from './MovieInfo.module.css';
 import { Link } from 'react-router-dom';
 import { FaHeart, FaUser, FaImage } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const MovieInfo = ({ movie }) => {
+	const { darkTheme } = useContext(ThemeContext);
 	const { t } = useTranslation();
 
 	return (
@@ -27,11 +30,21 @@ const MovieInfo = ({ movie }) => {
 					</Link>
 				</div>
 				<div className={classes.info_container}>
-					<h1 className={classes.movie_title}>
+					<h1
+						className={
+							darkTheme ? `${classes.movie_title} ${classes.dark}` : `${classes.movie_title}`
+						}
+					>
 						{movie.title}
 						<span className={classes.movie_release_date}>{movie.release_date.slice(0, 4)}</span>
 					</h1>
-					<h2 className={classes.movie_tagline}>{movie.tagline}</h2>
+					<h2
+						className={
+							darkTheme ? `${classes.movie_tagline} ${classes.dark}` : `${classes.movie_tagline}`
+						}
+					>
+						{movie.tagline}
+					</h2>
 					<p className={classes.movie_overview}>{movie.overview}</p>
 					<div className={classes.genre_container}>
 						{movie.genres.map(genre => {

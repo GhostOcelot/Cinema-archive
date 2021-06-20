@@ -16,7 +16,7 @@
 	background-color: var(--colorGrey3);
 	color: var(--colorOrange);
 	border: none;
-	border-bottom: 1px solid var(--colorOrange);
+	border-bottom: 2px solid var(--colorOrange);
 }
 
 .movie_search::placeholder {
@@ -25,7 +25,7 @@
 
 .movie_search:focus {
 	border-bottom: 1px solid var(--colorGrey5);
-	box-shadow: 0 0 0 1pt var(--colorOrange);
+	box-shadow: 0 0 0 1pt var(--colorOrange), 0 0 0 2pt var(--colorGrey5);
 	outline: none;
 }
 

@@ -23,7 +23,7 @@ const MoviesContextProvider = props => {
 			.then(data => {
 				setMovies(data);
 			});
-	}, [language]);
+	}, [language, currentPage, selectedGenres]);
 
 	return (
 		<MoviesContext.Provider value={{ movies, setMovies }}>{props.children}</MoviesContext.Provider>

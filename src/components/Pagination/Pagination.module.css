@@ -4,18 +4,19 @@
 	align-items: center;
 }
 
-.button:focus {
-	box-shadow: 0 0 0 1pt var(--colorOrange);
-	outline: none;
-}
-
 .button {
 	width: 35px;
 	height: 30px;
 	margin: 20px 9px;
 	background-color: var(--colorOrange2);
-	border: 1px solid var(--colorGrey4);
+	box-shadow: 0 0 0 1pt var(--colorOrange);
+	border: none;
 	cursor: pointer;
+}
+
+.button:focus {
+	box-shadow: 0 0 0 1pt var(--colorGrey4), 0 0 0 2pt var(--colorOrange);
+	outline: none;
 }
 
 .current_page {

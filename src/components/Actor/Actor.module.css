@@ -5,6 +5,7 @@
 	margin: 10px;
 	width: 141px;
 	height: 360px;
+	background: var(--colorGrey5);
 }
 
 .actor_headshot {
