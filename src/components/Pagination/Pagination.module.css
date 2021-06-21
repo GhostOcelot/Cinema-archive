@@ -8,15 +8,27 @@
 	width: 35px;
 	height: 30px;
 	margin: 20px 9px;
-	background-color: var(--colorOrange2);
-	box-shadow: 0 0 0 1pt var(--colorOrange);
-	border: none;
+	background-color: var(--colorOrange);
+	border: 1pt solid var(--colorGrey);
+	box-shadow: 0 0 0 1pt var(--colorGrey);
 	cursor: pointer;
+	transition: border 0.5s, box-shadow 0.5s;
+}
+
+.button.dark {
+	border: 1pt solid var(--colorGrey5);
+	box-shadow: 0 0 0 1pt var(--colorGrey5);
 }
 
 .button:focus {
-	box-shadow: 0 0 0 1pt var(--colorGrey4), 0 0 0 2pt var(--colorOrange);
+	border: 1pt solid var(--colorGrey5);
+	box-shadow: 0 0 0 1pt var(--colorGrey);
 	outline: none;
+}
+
+.button.dark:focus {
+	border: 1pt solid var(--colorGrey5);
+	box-shadow: 0 0 0 1pt var(--colorOrange);
 }
 
 .current_page {

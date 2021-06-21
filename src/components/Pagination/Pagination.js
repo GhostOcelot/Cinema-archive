@@ -5,6 +5,7 @@ import { SelectedGenresContext } from '../../contexts/SelectedGenresContext';
 import { CurrentPageContext } from '../../contexts/CurrentPageContext';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const Pagination = () => {
 	const { movies, setMovies } = useContext(MoviesContext);
@@ -12,6 +13,7 @@ const Pagination = () => {
 	const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
 	const { language } = useContext(LanguageContext);
 	const { t } = useTranslation();
+	const { darkTheme } = useContext(ThemeContext);
 
 	const goToPage = page => {
 		if (page === 0 || page === movies.total_pages + 1 || page === currentPage) {
@@ -35,14 +37,22 @@ const Pagination = () => {
 	return (
 		<>
 			{movies && (
-				<div className={classes.button_container}>
-					<button name="first_page" onClick={() => goToPage(1)} className={classes.button}>
+				<div
+					className={
+						darkTheme ? `${classes.button_container} ${classes.dark}` : classes.button_container
+					}
+				>
+					<button
+						name="first_page"
+						onClick={() => goToPage(1)}
+						className={darkTheme ? `${classes.button} ${classes.dark}` : `${classes.button}`}
+					>
 						1
 					</button>
 					<button
 						name="previous_page"
 						onClick={() => goToPage(movies.page - 1)}
-						className={classes.button}
+						className={darkTheme ? `${classes.button} ${classes.dark}` : `${classes.button}`}
 					>
 						&lt;
 					</button>
@@ -52,14 +62,14 @@ const Pagination = () => {
 					<button
 						name="next_page"
 						onClick={() => goToPage(movies.page + 1)}
-						className={classes.button}
+						className={darkTheme ? `${classes.button} ${classes.dark}` : `${classes.button}`}
 					>
 						&gt;
 					</button>
 					<button
 						name="last_page"
 						onClick={() => goToPage(movies.total_pages)}
-						className={classes.button}
+						className={darkTheme ? `${classes.button} ${classes.dark}` : `${classes.button}`}
 					>
 						{movies.total_pages}
 					</button>

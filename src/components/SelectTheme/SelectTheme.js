@@ -14,7 +14,7 @@ const SelectTheme = () => {
 			className={
 				darkTheme
 					? `${classes.select_theme_btn_container} ${classes.dark}`
-					: `${classes.select_theme_btn_container}`
+					: classes.select_theme_btn_container
 			}
 		>
 			<span>dark</span>

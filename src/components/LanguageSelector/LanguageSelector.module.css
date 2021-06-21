@@ -4,7 +4,7 @@
 	margin-bottom: 25px;
 	font-size: 0.8em;
 	position: absolute;
-	top: 17px;
+	top: 23px;
 	left: 27px;
 }
 
@@ -18,11 +18,17 @@
 	font-size: 0.8em;
 	padding: 5px 10px;
 	margin: 4px;
-	border: 2px solid var(--colorGrey2);
+	border: 1pt solid var(--colorGrey2);
 	background-color: var(--colorGrey5);
 	color: var(--colorGrey1);
 	cursor: pointer;
 	border-radius: 50%;
+	transition: background-color 0.5s, border 0.5s, box-shadow 0.5s, color 1s;
+}
+
+.language_btn:focus.dark {
+	border: none;
+	box-shadow: 0 0 0 2pt var(--colorGrey2);
 }
 
 .language_btn:hover {
@@ -30,7 +36,7 @@
 }
 
 .language_btn:focus {
-	box-shadow: 0 0 0 1pt var(--colorOrange), 0 0 0 2pt var(--colorGrey5);
+	border: 1pt solid var(--colorOrange);
 	outline: none;
 }
 
@@ -40,10 +46,21 @@
 	font-weight: 600;
 }
 
+.language_btn.active:focus {
+	border: 1pt solid var(--colorGrey3);
+	box-shadow: 0 0 0 1pt var(--colorOrange);
+}
+
 .info {
 	color: var(--colorGrey1);
 	margin-left: 10px;
 	font-size: 0.8em;
+}
+
+@media (max-width: 599px) {
+	.language_btn_container {
+		top: 18px;
+	}
 }
 
 @media (max-width: 540px) {

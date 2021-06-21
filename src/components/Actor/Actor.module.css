@@ -2,7 +2,6 @@
 	border: 3px solid var(--colorOrange);
 	box-sizing: content-box;
 	padding: 3px;
-	margin: 10px;
 	width: 141px;
 	height: 360px;
 	background: var(--colorGrey5);
@@ -25,7 +24,7 @@
 }
 
 .actor_info {
-	padding: 5px 10px 20px;
+	padding: 5px 10px 61px;
 }
 
 .actor_name {
@@ -42,24 +41,40 @@
 }
 
 .link {
+	margin: 10px;
+	padding: 2pt;
+	box-shadow: 0 0 0 2pt var(--colorGrey);
 	text-decoration: none;
+	outline: none;
+}
+
+.link:focus {
+	box-shadow: 0 0 0 2pt var(--colorGrey5);
+}
+
+.link.dark {
+	box-shadow: 0 0 0 2pt var(--colorGrey5);
+}
+
+.link.dark:focus {
+	box-shadow: 0 0 0 2pt var(--colorGrey);
 }
 
 @media (max-width: 380px) {
 	.actor {
 		height: 280px;
 		margin: 6px;
-		width: 110px;
+		width: 108px;
 	}
 
 	.actor_headshot {
-		width: 110px;
-		height: 165px;
+		width: 108px;
+		height: 163px;
 	}
 
 	.actor_no_headshot {
-		width: 110px;
-		height: 165px;
+		width: 108px;
+		height: 163px;
 	}
 
 	.actor_info {
@@ -73,5 +88,19 @@
 	.actor_character {
 		font-size: 0.8em;
 		line-height: 1.3em;
+	}
+
+	.link {
+		margin: 2px;
+		padding: 0pt;
+		box-shadow: 0 0 0 1pt var(--colorGrey);
+		text-decoration: none;
+		outline: none;
+	}
+	.link:focus {
+		box-shadow: inset 0 0 0 2pt var(--colorGrey5);
+	}
+	.link.dark:focus {
+		box-shadow: inset 0 0 0 2pt var(--colorGrey);
 	}
 }

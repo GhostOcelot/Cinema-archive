@@ -2,7 +2,7 @@
 	max-width: 520px;
 	min-width: 320px;
 	margin-bottom: 10px;
-	padding: 0 16px;
+	padding: 0 10px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -10,24 +10,32 @@
 
 .genre_tile {
 	font-size: 0.8em;
-	padding: 5px 10px;
-	margin: 3px;
-	border: 2px solid var(--colorGrey2);
+	padding: 4px 10px;
+	margin: 4px;
+	border: none;
 	background-color: var(--colorGrey5);
 	color: var(--colorGrey1);
 	cursor: pointer;
+	box-shadow: 0 0 0 1pt var(--colorGrey5), 0 0 0 2pt var(--colorGrey2);
+	/* transition: all 0.5s; */
 }
 
 .genre_tile:hover {
 	background-color: var(--colorGrey3);
+	box-shadow: 0 0 0 2pt var(--colorGrey3);
 }
 
 .genre_tile.active {
-	background-color: var(--colorOrange2);
+	background-color: var(--colorOrange);
+	box-shadow: 0 0 0 2pt var(--colorOrange);
 	color: var(--colorGrey5);
 }
 
 .genre_tile:focus {
-	box-shadow: 0 0 0 1pt var(--colorOrange), 0 0 0 2pt var(--colorGrey5);
+	box-shadow: 0 0 0 1pt var(--colorGrey5), 0 0 0 2pt var(--colorOrange);
+	outline: none;
+}
+
+.genre_tile.active:focus {
 	outline: none;
 }

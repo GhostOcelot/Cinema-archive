@@ -1,11 +1,18 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Actor.module.css';
 import { FaImage } from 'react-icons/fa';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const Actor = ({ actor }) => {
+	const { darkTheme } = useContext(ThemeContext);
+
 	return (
 		<>
-			<Link to={`/actor/${actor.id}`} className={classes.link}>
+			<Link
+				to={`/actor/${actor.id}`}
+				className={darkTheme ? `${classes.link} ${classes.dark}` : `${classes.link}`}
+			>
 				<div className={classes.actor} key={actor.id}>
 					{actor.profile_path ? (
 						<img

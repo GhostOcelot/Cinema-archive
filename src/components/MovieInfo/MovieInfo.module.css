@@ -49,7 +49,7 @@
 
 .link_to_browser:focus {
 	outline: none;
-	box-shadow: inset 0 0 0 1pt var(--colorGrey5);
+	box-shadow: inset 0 0 0 2pt var(--colorOrange), inset 0 0 0 3pt var(--colorGrey5);
 }
 
 .info_container {
@@ -78,6 +78,7 @@
 	color: var(--colorGrey5);
 	margin-bottom: 5px;
 	line-height: 1.3em;
+	transition: color 0.5s;
 }
 
 .movie_tagline.dark {
