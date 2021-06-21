@@ -7,6 +7,7 @@ const SelectTheme = () => {
 
 	const toggleTheme = () => {
 		setDarkTheme(!darkTheme);
+		localStorage.setItem('darkmode', JSON.stringify({ darkMode: !darkTheme }));
 	};
 
 	return (

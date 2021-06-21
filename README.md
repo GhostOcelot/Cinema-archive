@@ -1,6 +1,6 @@
 # Movie archive
 
-Responsive desktop web application developed with react. Uses TMDB API to browse over tons of cinema related data. Offers browsing movies with custom autocomplete searchbar, filtering by genre and displaying details of chosen motion pictures. Application in constant development. Examples of planned features: displaying creators and actors for each movie, browsing creators and actors, building favourites and watchlists for logged users.
+Responsive desktop web application developed with react. Uses TMDB API to browse over tons of cinema related data. Offers browsing movies with custom autocomplete searchbar, filtering by genre and displaying details of chosen motion pictures, including cast. Offers cards with actors biography. All data is available both in english and polish. Dark mode and light mode available for users comfort and better experience. Language and light mode are stored in local storage so the user's choice perseveres across sessions. App in constant development. More features will be added in the near future.
 
 # Instructions
 

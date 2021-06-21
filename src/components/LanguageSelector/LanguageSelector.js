@@ -10,6 +10,7 @@ const LanguageSelector = () => {
 	const changeLanguage = language => {
 		i18n.changeLanguage(language);
 		setLanguage(language);
+		localStorage.setItem('language', JSON.stringify({ language: language }));
 	};
 
 	return (
